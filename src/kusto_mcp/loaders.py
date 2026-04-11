@@ -29,7 +29,7 @@ class SchemaLoader(ABC):
     Returns:
       A dictionary mapping table names to their TableSchema objects.
     """
-    pass
+    pass  # pragma: no cover
 
   def get_schema_by_name(self, table_name: str) -> TableSchema | None:
     """Get a specific table schema by name.
