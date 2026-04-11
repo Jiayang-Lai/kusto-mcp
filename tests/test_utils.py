@@ -118,9 +118,7 @@ class TestGetSchemaByName:
     # Just verify it returns None or a TableSchema
     assert result is None or isinstance(result, TableSchema)
 
-  def test_get_schema_by_name_with_csv_loader(
-    self, temp_csv_schemas_dir: Path
-  ) -> None:
+  def test_get_schema_by_name_with_csv_loader(self, temp_csv_schemas_dir: Path) -> None:
     """Test getting a schema using CSV loader."""
     loader = CSVSchemaLoader(schemas_dir=temp_csv_schemas_dir)
     schema = get_schema_by_name("DeviceEvents", loader=loader)

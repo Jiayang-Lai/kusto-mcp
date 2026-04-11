@@ -166,9 +166,7 @@ class TestTableSchema:
     assert restored.reference == sample_table_schema.reference
     assert len(restored.columns) == len(sample_table_schema.columns)
 
-    for orig, rest in zip(
-      sample_table_schema.columns, restored.columns, strict=True
-    ):
+    for orig, rest in zip(sample_table_schema.columns, restored.columns, strict=True):
       assert rest.name == orig.name
       assert rest.type == orig.type
       assert rest.description == orig.description
