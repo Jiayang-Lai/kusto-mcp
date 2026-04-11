@@ -1,6 +1,6 @@
 """Pydantic models for Kusto table schemas."""
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class Column(BaseModel):
@@ -40,7 +40,4 @@ class TableSchema(BaseModel):
   reference: str = Field(description="URL to the official documentation")
   columns: list[Column] = Field(description="List of columns in the table")
 
-  class Config:
-    """Pydantic configuration for TableSchema."""
-
-    populate_by_name = True
+  model_config = ConfigDict(populate_by_name=True)
