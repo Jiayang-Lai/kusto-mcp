@@ -1,0 +1,5 @@
+format:
+  json:
+    pretty: true
+  cyclonedx-json:
+    pretty: true
