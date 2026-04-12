@@ -1,4 +1,4 @@
-.PHONY: help chore lint lint-fix scan sbom vuln format
+.PHONY: help chore lint lint-fix scan sbom vuln format test test-multi
 
 help: ## Show help message
 	@grep -E '^[a-zA-Z0-9_%\-]+:\s*##' $(MAKEFILE_LIST) | sed 's/:.*##\s*/: /'
@@ -24,3 +24,19 @@ scan: ## Run grype security scan on the SBOM file (requires sbom.json to be pres
 	grype sbom:sbom.json -v --fail-on medium
 
 vuln: sbom scan ## Generate SBOM and run vulnerability scan
+
+test: ## Run tests for the current Python version
+	@echo "Running tests for the current Python version..."
+	uv run pytest
+
+test-multi: ## Run tests
+	@echo "Running tests..."
+	@echo "Running tests for Python 3.12, 3.13, and 3.14..."
+	@echo "Running pytest for Python 3.12..."
+	uv run --python 3.12 pytest
+	@echo "Running pytest for Python 3.13..."
+	uv run --python 3.13 pytest
+	@echo "Running pytest for Python 3.14..."
+	uv run --python 3.14 pytest
+
+
