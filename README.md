@@ -25,6 +25,10 @@ uv add kusto-mcp
 pip install kusto-mcp
 ```
 
+### Adding custom schemas
+
+Place your table schema JSON files in the `samples/schemas/` directory relative to where your invocation of the server occurs. Each file should follow the schema format defined in `schemas/table.json`.
+
 ### Running the server
 
 ```python
@@ -32,10 +36,6 @@ from kusto_mcp.server import mcp
 
 mcp.run()
 ```
-
-### Adding custom schemas
-
-Place your table schema JSON files in the `samples/schemas/` directory. Each file should follow the schema format defined in `schemas/table.json`.
 
 #### Implementing a custom loader
 
@@ -129,3 +129,7 @@ make vuln
 # To-dos
 
 This section lists out the to-dos for the project.
+
+- [ ] Add `strip_whitespace` and `min_length` [arguments](https://pydantic.dev/docs/validation/2.1/usage/types/string_types/#constrained-types) to the `TableSchema` so that edge cases like empty fields are handled robustly.
+- [ ] Add `$schema` as one of the field requirement in `table.json`.
+- [ ] Ads GitHub action to publish package to PyPI.
