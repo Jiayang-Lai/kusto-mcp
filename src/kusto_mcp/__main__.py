@@ -3,7 +3,7 @@
 from kusto_mcp.server import mcp
 
 
-def main():
+def main() -> None:
   """Run the MCP server."""
   mcp.run()
 

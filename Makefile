@@ -1,7 +1,7 @@
 .PHONY: help chore lint lint-fix scan sbom vuln format test test-multi
 
 help: ## Show help message
-	@grep -E '^[a-zA-Z0-9_%\-]+:\s*##' $(MAKEFILE_LIST) | sed 's/:.*##\s*/: /'
+	@grep -E '^[a-zA-Z0-9_%\-]+:[[:space:]]*##' $(MAKEFILE_LIST) | sed 's/:.*##[[:space:]]*/: /'
 
 lint: ## Run ruff linter on the scripts
 	ruff check

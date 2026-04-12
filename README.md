@@ -81,6 +81,7 @@ mcp.run()
 The project uses an extensible loader pattern via Python's ABC (Abstract Base Class), allowing schemas to be loaded from various sources:
 
 - **`FileSchemaLoader`** — Loads schemas from local JSON files (default)
+- **`CSVSchemaLoader`** — Loads schemas from CSV files; use this when your table metadata is maintained in spreadsheet/tabular form rather than per-table JSON documents
 - Custom loaders can be implemented to fetch schemas from APIs, databases, or other sources
 
 ## SBOM and CVE Scanning
