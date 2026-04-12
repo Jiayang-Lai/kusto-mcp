@@ -1,7 +1,7 @@
 {
   "$schema": "https://github.com/Jiayang-Lai/100-Days-of-KQL/raw/refs/heads/main/schemas/files/table.json",
   "table_name": "DeviceNetworkEvents",
-  "table_description": "Microsoft Defender for Endpoints (MDE) device network events table. This table contains contains information about network connections and related events initiated by processes running on the endpoint.",
+  "table_description": "Microsoft Defender for Endpoints (MDE) device network events table. This table contains information about network connections and related events initiated by processes running on the endpoint.",
   "reference": "https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/devicenetworkevents",
   "columns": [
     {
