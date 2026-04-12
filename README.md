@@ -17,14 +17,20 @@ When writing KQL (Kusto Query Language) queries against Kusto logs, knowing the 
 
 ### Installation
 
+```bash
+# Using uv (recommended)
+uv add kusto-mcp
+
+# Using pip
+pip install kusto-mcp
+```
+
 ### Running the server
 
-```bash
-# Run directly with uv
-uv run server
+```python
+from kusto_mcp.server import mcp
 
-# Or if installed globally
-server
+mcp.run()
 ```
 
 ### Adding custom schemas
