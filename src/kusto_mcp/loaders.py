@@ -98,7 +98,7 @@ class FileSchemaLoader(SchemaLoader):
 class CSVSchemaLoader(SchemaLoader):
   """Load table schemas from CSV files in a directory.
 
-  CSV files should have columns: name, type, description.
+  CSV files should have columns: Column, Type, Description.
   The table name is derived from the filename (e.g., DeviceInfo.csv -> DeviceInfo).
 
   If no directory is specified, it defaults to the `samples/schemas_csv` directory.
