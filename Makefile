@@ -39,4 +39,6 @@ test-multi: ## Run tests
 	@echo "Running pytest for Python 3.14..."
 	uv run --python 3.14 pytest
 
-
+version-bump: ## Bump version using uv (patch by default)
+	@echo "Bumping version..."
+	uv version --bump patch

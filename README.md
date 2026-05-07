@@ -130,6 +130,7 @@ make vuln
 
 This section lists out the to-dos for the project.
 
+- [ ] Expose operator syntax and usage example as tools so that AI doesn't hallucinate when invoking operators.
 - [ ] Add `strip_whitespace` and `min_length` [arguments](https://pydantic.dev/docs/validation/2.1/usage/types/string_types/#constrained-types) to the `TableSchema` so that edge cases like empty fields are handled robustly.
 - [ ] Add `$schema` as one of the field requirement in `table.json`.
-- [ ] Ads GitHub action to publish package to PyPI.
+- [X] Add GitHub action to publish package to PyPI.
