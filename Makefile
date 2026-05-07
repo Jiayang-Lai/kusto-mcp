@@ -42,3 +42,8 @@ test-multi: ## Run tests
 version-bump: ## Bump version using uv (patch by default)
 	@echo "Bumping version..."
 	uv version --bump patch
+
+ff-merge: ## Fast-forward merge the dev branch to main
+	@echo "Performing fast-forward merge to main..."
+	git checkout main
+	git merge --ff-only dev
