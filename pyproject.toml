@@ -1,8 +1,9 @@
 [project]
 name = "kusto-mcp"
-version = "0.1.1"
+version = "0.1.2"
 description = "MCP server that exposes Kusto table schemas as tools"
 readme = "README.md"
+license = "Apache-2.0"
 authors = [
     { name = "Jiayang", email = "clouds_couch_0c@icloud.com" }
 ]
@@ -11,6 +12,11 @@ dependencies = [
     "fastmcp>=3.2.0",
     "pydantic>=2.12.5",
 ]
+
+[project.urls]
+Homepage = "https://github.com/Jiayang-Lai/kusto-mcp"
+Documentation = "https://github.com/Jiayang-Lai/kusto-mcp/blob/main/README.md"
+Repository = "https://github.com/Jiayang-Lai/kusto-mcp"
 
 [project.scripts]
 server = "kusto_mcp.__main__:main"
